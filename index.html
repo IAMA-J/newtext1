@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="css/succulent.css">
+		<title>红色强国</title>
+		<link href="layui/css/layui.css" rel="stylesheet">
+		<script src="layui/layui.js"></script>
+		<style>
+			.layui-carousel-ind {
+				background-color: rgba(255, 255, 255, 0)!important;
+			}
+			.seach input{
+				border-radius: 5px;
+				padding-left: 10px;
+				color: #f2f2f2;
+				border: 1px solid #f2f2f2;
+			}
+
+			
+			.teach2,.teach2 ul {
+				width: 100%;
+				/* height: 400px; */
+				margin: 25px auto;
+			 
+			}
+			.teach2 ul {
+				display: flex;
+				justify-content: space-around;
+			}
+			
+			.teach2 li {
+				width: 22%;
+				perspective: 23000px;
+				transform-style: preserve-3d;
+				transition: 1s;
+				overflow: hidden;
+			}
+			
+			/* .teach2 li:hover p {
+				transform: rotatey(0deg);
+			} */
+			
+			.teach2 li:hover img {
+				transform: scale(1.1);
+			}
+			
+			.teach2 li img {
+				z-index: 2;
+				width: 100%; 
+				/* height: 300px; */
+				object-fit: cover;
+				/* position: absolute;
+				top: 0;
+				left: 0; */
+				backface-visibility: hidden;
+				transform: rotatey(0deg);
+				transition: transform 0.3s ease;
+			}
+			
+			.teach2 li p {
+				background: rgba(0, 0, 0, 0.2);
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 280px;
+				height: 380px;
+				color: white;
+				font-size: 18px;
+				line-height: 30px;
+				padding: 15px;
+				box-sizing: border-box;
+				transition: 1s;
+				transform: rotatey(-180deg);
+			}
+			
+			.teach2 li b {
+				color: brown;
+				font-size: 26px;
+			}
+			
+		</style>
+	</head>
+
+	<body>
+		<div class="box">
+			<div class="left">
+				<img src="image/微信图片_20240520125436.png" />
+				<!-- <img src="images/tt.png" /> -->
+			</div>
+			<ul class="m-tab">
+				<li>
+					<a href="#">首页</a>
+				</li>
+				<li>
+					<a href="#">党纪学习教育</a>
+				</li>
+				<li>
+					<a href="#">学习二十大</a>
+				</li>
+				<li>
+					<a href="#">电影党课</a>
+				</li>
+				<li>
+					<a href="#">音频党课</a>
+				</li>
+				<li>
+					<a href="#">微党课</a>
+				</li>
+				<li>
+					<a href="#">人民党建云</a>
+				</li>
+			</ul>
+			
+			<!-- <div class="seach">
+				<input type="search" placeholder="请输入关键词" id="" value="" name="search" />
+				<div id="search">搜索</div>
+			</div> -->
+			
+		</div>
+
+		<div class="layui-carousel" id="slider">
+			<div carousel-item>
+			<!-- 	<div class="img">
+					<img src="image/y1.jpg" alt="" />
+				</div> -->
+				<div style="
+				background-image: url(image/hongse.jpg);height: 450px;
+				 background-position: center; background-size: 100%;
+				background-repeat: no-repeat;"></div>
+				<!-- 
+				<div style="
+		    	background-image: url(image/a2.jpg);  background-position: center; background-size: 100%;;
+		    	background-repeat: no-repeat;"></div>
+				<div style="
+		    	background-image: url(image/a3.jpg);  background-position: center; background-size: 100%;
+		    	background-repeat: no-repeat;"></div>
+				<div style="
+		    	background-image: url(image/a4.jpg);  background-position: center; background-size: 100%;
+		    	background-repeat: no-repeat;"></div> -->
+			</div>
+		</div>
+		<script>
+			layui.use('carousel', function() {
+				var carousel = layui.carousel;
+				//建造实例
+				carousel.render({
+					elem: '#slider',
+					width: '100%' //设置容器宽度
+						,
+					height: '460px',
+					arrow: 'always' //始终显示箭头
+					//,anim: 'updown' //切换动画方式
+				});
+			});
+		</script>
+
+		<div class="border-radius">电影党课</div>
+		<div class="main">
+			<div class="view">
+				<img src="image/m1.jpg" alt="">
+				<div class="hover">
+					<h3>《长津湖》</h3>
+					<p>从胜利走向胜利</p>
+				</div>
+			</div>
+			<div class="view">
+				<img src="image/m2.jpg" alt="">
+				<div class="hover">
+					<h3>《冰山上的来客》</h3>
+					<p>唱响民族团结的颂歌</p>
+				</div>
+			</div>
+			<div class="view">
+				<img src="image/m3.jpg" alt="">
+				<div class="hover">
+					<h3>《铁道游击队》</h3>
+					<p>打得日寇魂飞魄散</p>
+				</div>
+			</div>
+			<div class="view">
+				<img src="image/m4.jpg" alt="">
+				<div class="hover">
+					<h3>《英雄儿女》</h3>
+					<p>致敬“最可爱的人”</p>
+				</div>
+			</div>
+			<!-- <div class="view">
+				<img src="image/m1.jpg" alt="">
+				<div class="hover">
+					<h3>潮流海鲜</h3>
+					<p>海里的可食用的动物性、或植物性原料</p>
+				</div>
+			</div>
+			<div class="view">
+				<img src="image/m2.jpg" alt="">
+				<div class="hover">
+					<h3>撒网捕鱼</h3>
+					<p>撒网捕鱼是一项古老而有趣的活动，但需要一定的技巧和经验</p>
+				</div>
+			</div>
+			<div class="view">
+				<img src="image/m3.jpg" alt="">
+				<div class="hover">
+					<h3>生物多样性</h3>
+					<p>鱼类丰富度处在或高于最大可持续产量</p>
+				</div>
+			</div>
+			<div class="view">
+				<img src="image/m4.jpg" alt="">
+				<div class="hover">
+					<h3>海洋钓鱼</h3>
+					<p>闲游海钓是生态旅游的内容</p>
+				</div>
+			</div> -->
+		</div>
+
+		<div class="border-radius">重要讲话</div>
+		<div class="teach2">
+			<ul>
+				<Li style="position: relative;">
+					<img src="image/a1.jpg" class="img" style="z-index: -1; position: absolute;">
+					<div style="position: absolute;z-index: 999;color: white;
+					background-color: rgba(0, 0, 0, 0.2); bottom: 5px; width: 100%;padding: 10px;">
+						学习贯彻习近平外交思想
+						（一）
+					</div>
+				</Li>
+				<Li>
+					<img src="image/a2.jpg" style="z-index: -1;">
+					<div style="position: absolute;z-index: 999;color: white;
+					background-color: rgba(0, 0, 0, 0.2); bottom: 5px; width: 100%;padding: 10px;">
+						学习贯彻习近平外交思想
+						（一）
+					</div>
+				</Li>
+				<Li>
+					<img src="image/a3.jpg">
+					<div style="position: absolute;z-index: 999;color: white;
+					background-color: rgba(0, 0, 0, 0.2); bottom: 5px; width: 100%;padding: 10px;">
+						《党课开讲啦》节目：
+						党的光辉历程
+					</div>
+				</Li>
+				<Li>
+					<img src="image/a4.jpg">
+					<div style="position: absolute;z-index: 999;color: white;
+					background-color: rgba(0, 0, 0, 0.2); bottom: 5px; width: 100%;padding: 10px;">
+						《党课开讲啦》节目：
+						伟大建党精神
+					</div>
+				</Li>
+			</ul>
+			<ul>
+				<Li>
+					<img src="image/a7.jpg" class="img">
+					<div style="position: absolute;z-index: 999;color: white;
+					background-color: rgba(0, 0, 0, 0.2); bottom: 5px; width: 100%;padding: 10px;">
+						《党课开讲啦》节目：党的伟大成就
+					</div>
+				</Li>
+				<Li>
+					<img src="image/a6.jpg">
+					<div style="position: absolute;z-index: 999;color: white;
+					background-color: rgba(0, 0, 0, 0.2); bottom: 5px; width: 100%;padding: 10px;">
+						中国式现代化的内涵
+					</div>
+				</Li>
+				<Li>
+					<img src="image/a7.jpg">
+					<div style="position: absolute;z-index: 999;color: white;
+					background-color: rgba(0, 0, 0, 0.2); bottom: 5px; width: 100%;padding: 10px;">
+						中国式现代化的内涵
+					</div>
+				</Li>
+				<Li>
+					<img src="image/a8.jpg">
+					<div style="position: absolute;z-index: 999;color: white;
+					background-color: rgba(0, 0, 0, 0.2); bottom: 5px; width: 100%;padding: 10px;">
+					牢牢把握建设中国式现代化的使命和任务
+					</div>
+				</Li>
+			</ul>
+
+		</div>
+		<div class="border-radius">微党课</div>
+		<div class="foat">
+			<div class="container">
+				<ul>
+					<li>
+						<!-- <h3>生腌海鲜</h3> -->
+						<div class="tilt img">
+							<img src="image/l1.jpg" />
+						</div>
+					</li>
+					<li>
+						<!-- <h3>三文鱼</h3> -->
+						<div class="tilt img">
+							<img src="image/l3.jpg" />
+						</div>
+					</li>
+					<li>
+						<!-- <h3>清蒸大闸蟹</h3> -->
+						<div class="tilt img">
+							<img src="image/l4.jpg" />
+						</div>
+					</li>
+					<li>
+						<!-- <h3>多拼海鲜</h3> -->
+						<div class="tilt img">
+							<img src="image/l5.jpg" />
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<footer style="margin-top:40px;color:#fff;width: 100%;height: 80px;line-height:80px;text-align:center;background-color: #2e2e2e;">
+			
+				公司：****商贸公司  &nbsp;&nbsp;&nbsp;&nbsp;    电话：0771-33453
+			
+
+		</footer>
+	</body>
+
+</html>
